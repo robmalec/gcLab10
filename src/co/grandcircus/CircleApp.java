@@ -41,7 +41,7 @@ public class CircleApp {
 					int circNum = 0;
 
 					// If there already exists more than 1 circle, asking which one the viewer would
-					// like to see
+					// like to review
 					if (allCircles.size() > 1) {
 						circNum = Validator.getInt(scn,
 								"Which circle would you like to review?  Enter a number between 1 and "
@@ -54,10 +54,27 @@ public class CircleApp {
 
 					allCircles.get(circNum).showInfo(true);
 				} else {
-					System.out.println("There are no circles left to review.");
+					System.out.println("There are no circles left to show.");
 				}
 				break;
 			case 's':
+				if (allCircles.size() > 0) {
+					int circNum = 0;
+
+					// If there already exists more than 1 circle, asking which one the viewer would
+					// like to see
+					if (allCircles.size() > 1) {
+						circNum = Validator.getInt(scn,
+								"Which circle would you like to see?  Enter a number between 1 and "
+										+ allCircles.size() + ": ",
+								1, allCircles.size());
+						circNum--;
+					}
+
+					allCircles.get(circNum).showCircle();
+				} else {
+					System.out.println("There are no circles left to show.");
+				}
 				break;
 			case 'd':
 				// Counting number of circles deleted
