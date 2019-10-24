@@ -53,10 +53,12 @@ public class CircleApp {
 					System.out.println("Here's circle #" + (circNum + 1) + ":");
 
 					allCircles.get(circNum).showInfo(true);
-					break;
 				} else {
 					System.out.println("There are no circles left to review.");
 				}
+				break;
+			case 's':
+				break;
 			case 'd':
 				// Counting number of circles deleted
 
@@ -76,19 +78,21 @@ public class CircleApp {
 
 					allCircles.remove(circNum);
 					System.out.println("Circle #" + (circNum + 1) + " was successfully deleted.");
-					break;
 				} else {
 					System.out.println("There are no circles left to delete.");
 				}
-
+				break;
 			default:
 				System.out.println("That was not a valid option.  Please try again.");
 				break;
 			}
 			System.out.println("");
-			System.out.println("What would you like to do?  Type a letter below and hit Enter.\n"
-					+ "c: Add a new circle\n" + "r: Review an existing circle\n" + "d: Delete a circle\n"
-					+ "q: Exit the program");
+			System.out.println("What would you like to do?  Type a letter below and hit Enter.\n" + 
+			"c: Add a new circle\n" + 
+			"r: Review an existing circle\n" + 
+			"s: Show an existing circle\n" + 
+			"d: Delete a circle\n" + 
+			"q: Exit the program");
 
 			nextMove = scn.next().charAt(0);
 		}

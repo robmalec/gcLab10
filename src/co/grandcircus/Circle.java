@@ -24,6 +24,23 @@ public class Circle {
 		System.out.println("Circumference: " + getFormattedCircumference());
 		System.out.println("Area: " + getFormattedArea());
 	}
+	public void showCircle() {
+		System.out.println("Showing circle with radius rounded up to the nearest unit");
+		final int dimension = (int) (2 * Math.ceil(radius));
+		for (int y = 0; y < dimension; y++) {
+			for (int x = 0; x < dimension; x++) {
+				System.out.println(isInCircle(x,y) ? "*" : " ");
+			}
+		}
+		
+	}
+	private Boolean isInCircle(int x, int y) {
+		return ((getSquared(x) + getSquared(y)) <= getSquared((int) Math.ceil(radius)));
+	}
+	private int getSquared(int input) {
+		return (int) Math.pow((double)input,2.0);
+	}
+	
 	public String getFormattedCircumference() {
 		return formatNumber(getCircumference());
 	}
