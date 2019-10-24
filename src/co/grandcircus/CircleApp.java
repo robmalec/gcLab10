@@ -106,8 +106,8 @@ public class CircleApp {
 			System.out.println("");
 			System.out.println("What would you like to do?  Type a letter below and hit Enter.\n" + 
 			"c: Add a new circle\n" + 
-			"r: Review an existing circle\n" + 
-			"s: Show an existing circle\n" + 
+			"r: Show details of a circle\n" + 
+			"s: Show a circle\n" + 
 			"d: Delete a circle\n" + 
 			"q: Exit the program");
 
