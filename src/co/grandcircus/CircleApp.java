@@ -132,6 +132,8 @@ public class CircleApp {
 		scn.close();
 	}
 
+	/*Checks the number of circles that exist, and determines if it's a single 'circle' or several 'circles', returning
+	 * a string with that text*/
 	static String getPluralOrNot(int number) {
 		if (number == 1) {
 			return "circle";
