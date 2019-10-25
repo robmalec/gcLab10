@@ -50,7 +50,7 @@ public class Circle {
 	I'm not working with perfecty square 'pixels', but I feel this is close enough.*/
 	private Boolean isInCircle(int x, int y) {
 		
-		return ((getSquared(x - (dimension/2)) + Math.round(getSquared((y - dimension/2))*5.2)) <= getSquared((int) Math.ceil(radius)));
+		return ((getSquared(x - (dimension/2)) + Math.round(getSquared((y - dimension/2))*5.25)) <= getSquared((int) Math.ceil(radius)));
 	}
 	
 	//Returns the given input integer squared
